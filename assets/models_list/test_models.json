@@ -92,7 +92,7 @@
     {
       "name": "ssd_mobilenet_v1_coco_quantized",
       "testName": "SSD_MOBILENET_V1_COCO_QUANT8",
-      "baselineSec": 0.97,
+      "baselineSec": 0.097,
       "inputSize": [1, 300, 300, 3],
       "dataSize": 1,
       "inputOutputs": [
@@ -1718,7 +1718,10 @@
     {
       "name": "asr_float",
       "testName": "ASR_FLOAT",
-      "baselineSec": 0.014,
+      "baselineSec": 0.016,
+      "evaluator": {
+          "className": "PhoneErrorRate"
+      },
       "inputSize": [1, 320, 1, 1],
       "dataSize": 4,
       "inputOutputs": [
