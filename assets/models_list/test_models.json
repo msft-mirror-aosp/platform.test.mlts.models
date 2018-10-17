@@ -130,52 +130,67 @@
       ]
     },
     {
-      "name": "resnet_float",
-      "baselineSec": 0.760,
-      "inputSize": [1, 299, 299, 3],
+      "name": "mobilenet_v2_0.35_128",
+      "baselineSec": 0.060,
+      "inputSize": [1, 128, 128, 3],
       "dataSize": 4,
       "inputOutputs": [
         {
-          "input": "resnet_float/cup.input",
-          "output": "resnet_float/cup.output"
+          "input": "mobilenet_float/cup_128.input",
+          "output": "mobilenet_float/cup_v2_0.35_128.output"
+        },
+		{
+          "input": "mobilenet_float/banana_128.input",
+          "output": "mobilenet_float/banana_v2_0.35_128.output"
         }
       ]
     },
     {
-      "name": "resnet_quantized",
-      "baselineSec": 0.670,
-      "inputSize": [1, 299, 299, 3],
-      "dataSize": 1,
-      "inputOutputs": [
-        {
-          "input": "resnet_quantized/cup.input",
-          "output": "resnet_quantized/cup.output"
-        }
-      ]
-    },
-    {
-      "name": "hdrnet_float",
-      "testName": "HDRNet_FLOAT",
-      "baselineSec": 0.011,
-      "inputSize": [1, 256, 256, 3],
+      "name": "mobilenet_v2_0.5_160",
+      "baselineSec": 0.060,
+      "inputSize": [1, 160, 160, 3],
       "dataSize": 4,
       "inputOutputs": [
         {
-          "input": "hdrnet_float/cup.input",
-          "output": "hdrnet_float/cup.output"
+          "input": "mobilenet_float/cup_160.input",
+          "output": "mobilenet_float/cup_v2_0.5_160.output"
+        },
+		{
+          "input": "mobilenet_float/banana_160.input",
+          "output": "mobilenet_float/banana_v2_0.5_160.output"
         }
       ]
     },
     {
-      "name": "hdrnet_quantized",
-      "testName": "HDRNet_QUANT8",
-      "baselineSec": 0.006,
-      "inputSize": [1, 256, 256, 3],
-      "dataSize": 1,
+      "name": "mobilenet_v2_0.75_192",
+      "baselineSec": 0.060,
+      "inputSize": [1, 192, 192, 3],
+      "dataSize": 4,
       "inputOutputs": [
         {
-          "input": "hdrnet_quantized/cup.input",
-          "output": "hdrnet_quantized/cup.output"
+          "input": "mobilenet_float/cup_192.input",
+          "output": "mobilenet_float/cup_v2_0.75_192.output"
+        },
+		{
+          "input": "mobilenet_float/banana_192.input",
+          "output": "mobilenet_float/banana_v2_0.75_192.output"
+        }
+      ]
+    },
+
+    {
+      "name": "mobilenet_v2_1.0_224",
+      "baselineSec": 0.060,
+      "inputSize": [1, 224, 224, 3],
+      "dataSize": 4,
+      "inputOutputs": [
+        {
+          "input": "mobilenet_float/cup_224.input",
+          "output": "mobilenet_float/cup_v2_1.0_224.output"
+        },
+		{
+          "input": "mobilenet_float/banana_224.input",
+          "output": "mobilenet_float/banana_v2_1.0_224.output"
         }
       ]
     },
